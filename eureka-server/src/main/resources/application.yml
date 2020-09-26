@@ -1,0 +1,21 @@
+server:
+  port: 8761
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  application:
+    name: eureka-server
+eureka:
+  server:
+    #关闭自我保护模式，在自我保护模式下eureka不会删除已下线的应用
+    enable-self-preservation: false
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
