@@ -4,7 +4,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 功能说明：
@@ -16,11 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-@RestController
+@EnableFeignClients
 public class UmsApplication {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(UmsApplication.class).web(WebApplicationType.SERVLET).run(args);
     }
+
 
 }

@@ -13,7 +13,7 @@ eureka:
   instance:
     hostname: localhost
     prefer-ip-address: true
-    instance-id: ${spring.application.name}:${server.port}
+    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}:${server.port}
   client:
     register-with-eureka: true
     fetch-registry: false
