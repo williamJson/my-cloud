@@ -13,6 +13,8 @@ import java.util.Date;
  */
 public class BaseEntity implements Serializable {
 
+    private static final long serialVersionUID=1L;
+
     private Long id;
 
     private Integer version;
@@ -24,4 +26,52 @@ public class BaseEntity implements Serializable {
     private Date createTime;
 
     private Date updateTime;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public Long getCreateBy() {
+        return createBy;
+    }
+
+    public void setCreateBy(Long createBy) {
+        this.createBy = createBy;
+    }
+
+    public Long getUpdateBy() {
+        return UpdateBy;
+    }
+
+    public void setUpdateBy(Long updateBy) {
+        UpdateBy = updateBy;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 }
