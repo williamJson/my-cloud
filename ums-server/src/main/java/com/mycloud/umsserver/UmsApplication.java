@@ -1,9 +1,11 @@
 package com.mycloud.umsserver;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,11 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-@RestController
+@EnableFeignClients
 public class UmsApplication {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(UmsApplication.class).web(WebApplicationType.SERVLET).run(args);
     }
+
 
 }

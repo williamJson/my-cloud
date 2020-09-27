@@ -1,4 +1,4 @@
-package com.mycloud.umsserver.pojo.po;
+package com.mycloud.api.common;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -24,4 +24,6 @@ public class BaseEntity implements Serializable {
     private Date createTime;
 
     private Date updateTime;
+
+
 }
