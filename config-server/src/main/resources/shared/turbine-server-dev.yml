@@ -1,0 +1,11 @@
+server:
+  port: 8762
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: ums-server,product-server
+  clusterNameExpression: new String("default")
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

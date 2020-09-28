@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @auther wyq
  * qq:342622023
  */
-@FeignClient(name = "ums-server")
+@FeignClient(name = "ums-server", fallback = MemberFallback.class)
 public interface MemberFeignClient {
 
     @GetMapping("/getMemberInfo/{id}")

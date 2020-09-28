@@ -14,6 +14,8 @@
         <module>config-server</module>
         <module>product-server</module>
         <module>api-server</module>
+        <module>turbine-server</module>
+        <module>zikpin-server</module>
     </modules>
 
 

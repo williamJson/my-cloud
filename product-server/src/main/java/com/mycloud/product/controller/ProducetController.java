@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by wyq on 2020/9/26.
  * 订单相关服务
+ *
  * @auther wyq
  * qq:342622023
  */
@@ -19,7 +20,8 @@ public class ProducetController {
 
 
     @GetMapping("/addCart")
-    public void addCart(){
-        System.out.println("this is call remote result="+memberFeignClient.getMemberInfo(123L));
+    public String addCart() {
+//        System.out.println("this is call remote result=" + memberFeignClient.getMemberInfo(123L));
+        return memberFeignClient.getMemberInfo(123L);
     }
 }
