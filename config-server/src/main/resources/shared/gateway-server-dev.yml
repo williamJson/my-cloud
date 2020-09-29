@@ -1,0 +1,27 @@
+server:
+  port: 8763
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}:${server.port}
+#zuul配置
+zuul:
+  routes:
+    ums:
+      path: /ums/**
+      service-id: ums-server
+    product:
+      path: /product/**
+      service-id: product-server
+
+spring:
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:8080
+    sender:
+      type: web

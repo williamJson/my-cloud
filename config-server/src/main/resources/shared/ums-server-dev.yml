@@ -7,3 +7,11 @@ eureka:
 feign:
   hystrix:
     enabled: true
+spring:
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:8080
+  sender:
+    type: web

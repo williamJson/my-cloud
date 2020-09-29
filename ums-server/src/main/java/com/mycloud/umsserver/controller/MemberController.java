@@ -21,9 +21,9 @@ public class MemberController {
      * @param id
      * @return
      */
-    @GetMapping("//getMemberInfo/{id}")
-    public String getMemberInfo(@PathVariable("id") Long id ) {
-        System.out.println("this is member id="+id);
-        return id+"";
+    @GetMapping("/getMemberInfo/{id}")
+    public String getMemberInfo(@PathVariable("id") Long id) {
+        System.out.println("this is member id=" + id);
+        return id + "";
     }
 }
