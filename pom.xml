@@ -17,6 +17,7 @@
         <module>turbine-server</module>
         <module>zipkin-server</module>
         <module>gateway-server</module>
+        <module>monitor-server</module>
     </modules>
 
 

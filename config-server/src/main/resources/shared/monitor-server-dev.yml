@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8765
 eureka:
   client:
     service-url:
@@ -7,17 +7,6 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}:${server.port}
-feign:
-  hystrix:
-    enabled: true
-spring:
-  sleuth:
-    sampler:
-      probability: 1.0
-  zipkin:
-    base-url: http://localhost:8080
-  sender:
-    type: web
 management:
   endpoints:
     web:

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: monitor-server
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        #从注册中心获取
+        enabled: true
+        service-id: config-server
+  profiles:
+    active: dev

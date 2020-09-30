@@ -20,8 +20,16 @@ zuul:
 spring:
   sleuth:
     sampler:
-      percentage: 1.0
+      probability: 1.0
   zipkin:
     base-url: http://localhost:8080
     sender:
       type: web
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
