@@ -13,11 +13,11 @@
         <module>ums-server</module>
         <module>config-server</module>
         <module>product-server</module>
-        <module>api-server</module>
         <module>turbine-server</module>
         <module>zipkin-server</module>
         <module>gateway-server</module>
         <module>monitor-server</module>
+        <module>comm-core</module>
     </modules>
 
 

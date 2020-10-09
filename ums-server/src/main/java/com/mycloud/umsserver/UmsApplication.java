@@ -1,6 +1,7 @@
 package com.mycloud.umsserver;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -10,6 +11,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * 功能说明：
@@ -24,6 +26,8 @@ import org.springframework.context.annotation.Bean;
 @EnableFeignClients
 @EnableHystrix
 @EnableHystrixDashboard
+@MapperScan("com.mycloud.umsserver.mapper")
+@EnableTransactionManagement
 public class UmsApplication {
 
     public static void main(String[] args) {

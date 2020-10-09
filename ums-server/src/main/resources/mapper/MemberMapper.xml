@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mycloud.umsserver.mapper.MemberMapper">
+
+    <insert id="insert" parameterType="com.mycloud.umsserver.pojo.po.Member">
+        insert into ums_member (id, u_name, u_pass, slat, mobile, sex, state, nickname, head_img, create_by)
+        values (#{id}, #{uName}, #{uPass}, #{slat}, #{mobile}, #{sex},
+                #{state}, #{nickname},
+                #{headImg}, #{createBy})
+    </insert>
+</mapper>

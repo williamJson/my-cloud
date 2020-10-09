@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>org.william</groupId>
-            <artifactId>api-server</artifactId>
+            <artifactId>comm-core</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
@@ -42,12 +42,28 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
 
-        <!--        <dependency>-->
-<!--            <groupId>org.mybatis.spring.boot</groupId>-->
-<!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
 
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.zaxxer</groupId>
+                    <artifactId>HikarCP</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.24</version>
+        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
