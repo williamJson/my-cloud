@@ -20,7 +20,7 @@ spring:
     type: web
   datasource:
     druid:
-      url: 'jdbc:mysql://192.168.124.88:3306/ums_dev?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai'
+      url: 'jdbc:mysql://47.110.49.234:3306/ums_dev?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai'
       username: 'ums_dev'
       password: 'ums_1234'
       initial-size: 5
@@ -38,6 +38,27 @@ spring:
       phy-max-use-count: 1000
       filter: "stat"
       driver-class-name: com.mysql.cj.jdbc.Driver
+  #配置rabbitMQ服务
+  rabbitmq:
+    host: 47.110.49.234
+    port: 5672
+    username: admin
+    password: wyq1234
+    #指定虚拟主机
+    virtual-host: mycloud
+    #确认消息已经发送到交换机（exchange）
+    publisher-confirms: true
+    #确认消息已经发送到对列（queue）
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        #并发消费者初始化值
+        concurrency: 1
+        #并发消费者的最大值
+        max-concurrency: 2
+        #每个消费者每次监听时可拉取处理的消息数量
+        prefetch: 2
 management:
   endpoints:
     web:

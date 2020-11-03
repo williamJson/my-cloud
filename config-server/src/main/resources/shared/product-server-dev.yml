@@ -18,6 +18,23 @@ spring:
     base-url: http://localhost:8080
   sender:
     type: web
+  #配置rabbitMQ服务
+  rabbitmq:
+    host: 47.110.49.234
+    port: 5672
+    username: admin
+    password: wyq1234
+    #指定虚拟主机
+    virtual-host: mycloud
+    listener:
+      simple:
+        acknowledge-mode: manual
+        #并发消费者初始化值
+        concurrency: 1
+        #并发消费者的最大值
+        max-concurrency: 2
+        #每个消费者每次监听时可拉取处理的消息数量
+        prefetch: 2
 management:
   endpoints:
     web:

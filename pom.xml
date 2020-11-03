@@ -18,6 +18,8 @@
         <module>gateway-server</module>
         <module>monitor-server</module>
         <module>comm-core</module>
+        <module>sharing_xa_demo</module>
+        <module>tcc-transaction-sample</module>
     </modules>
 
 

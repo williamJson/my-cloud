@@ -1,4 +1,4 @@
-package com.mycloud.umsserver.pojo.po;
+package com.mycloud.distributedDB.pojo.po;
 
 /**
  * 功能说明：
