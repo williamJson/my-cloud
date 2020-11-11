@@ -78,7 +78,6 @@ public class ApiController {
         params.put("create_time", new Date().toString());
         params.put("id", id.toString());
         redisTemplate.opsForHash().putAll(id.toString(), params);
-
         redisTemplate.opsForHash().entries(id.toString());
 //        redisTemplate.opsForHash().putIfAbsent()
         return params;

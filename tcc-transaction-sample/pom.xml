@@ -10,22 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tcc-transaction-sample</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>order-server</module>
+        <module>account-server</module>
+    </modules>
 
 
     <properties>
         <tcc.transaction.version>1.2.12</tcc.transaction.version>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
-
-<!--        <dependency>-->
-<!--            <groupId>org.mengyun</groupId>-->
-<!--            <artifactId>tcc-transaction-spring</artifactId>-->
-<!--            <version>${tcc.transaction.version}</version>-->
-<!--        </dependency>-->
-    </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package com.mycloud.umsserver.service;
+package com.mycloud.umsserver.pojo.vo;
 
 import com.mycloud.umsserver.pojo.po.Member;
 
@@ -8,9 +8,7 @@ import com.mycloud.umsserver.pojo.po.Member;
  * @author wyq
  * @email 342622023@qq.com
  * @phone 13155318100
- * @date 2020/10/9
+ * @date 2020/11/11
  */
-public interface MemberService {
-
-    Member register(Member member);
+public class MemberVo extends Member {
 }

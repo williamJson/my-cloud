@@ -17,4 +17,5 @@ public class MemberFallback implements MemberFeignClient {
     public String getMemberInfo(Long id) {
         return "getMemberInfo is full back";
     }
+
 }

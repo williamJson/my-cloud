@@ -35,7 +35,7 @@ public class UmsApplication {
     }
 
     @Bean
-    public ServletRegistrationBean getServlet(){
+    public ServletRegistrationBean getServlet() {
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
         registrationBean.setLoadOnStartup(1);
@@ -43,4 +43,6 @@ public class UmsApplication {
         registrationBean.setName("HystrixMetricsStreamServlet");
         return registrationBean;
     }
+    
+
 }

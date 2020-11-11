@@ -1,25 +1,33 @@
 package com.mycloud.umsserver.pojo.po;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Date;
+
 /**
  * 功能说明：
+ * 用户会员do
  *
  * @author wyq
  * @email 342622023@qq.com
  * @phone 13155318100
  * @date 2020/9/27
  */
+@Getter
+@Setter
 public class Member extends BaseEntity {
 
 
     /**
      * 用户名
      */
-    private String uName;
+    private String userName;
 
     /**
      * 密码
      */
-    private String uPass;
+    private String userPass;
 
     /**
      * 密码盐
@@ -39,7 +47,7 @@ public class Member extends BaseEntity {
     /**
      * 状态
      */
-    private String state;
+    private Integer state;
 
     /**
      * 昵称
@@ -49,70 +57,17 @@ public class Member extends BaseEntity {
     /**
      * 头像
      */
-    private String headImg;
+    private String avatarUrl;
 
 
-    public String getuName() {
-        return uName;
-    }
+    /**
+     * 上次登录时间
+     */
+    private Date lastLoginTime;
 
-    public void setuName(String uName) {
-        this.uName = uName;
-    }
+    /**
+     * 上次登录ip
+     */
+    private String lastLoginIp;
 
-    public String getuPass() {
-        return uPass;
-    }
-
-    public void setuPass(String uPass) {
-        this.uPass = uPass;
-    }
-
-    public String getSlat() {
-        return slat;
-    }
-
-    public void setSlat(String slat) {
-        this.slat = slat;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickename) {
-        this.nickname = nickename;
-    }
-
-    public String getHeadImg() {
-        return headImg;
-    }
-
-    public void setHeadImg(String headImg) {
-        this.headImg = headImg;
-    }
 }

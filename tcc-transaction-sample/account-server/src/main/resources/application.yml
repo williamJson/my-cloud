@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    druid:
+      url: 'jdbc:mysql://47.110.49.234:3306/ums_dev?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai'
+      username: 'ums_dev'
+      password: 'ums_1234'
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 2000
+      min-evictable-idle-time-millis: 600000
+      max-evictable-idle-time-millis: 900000
+      validation-query: "select 1"
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      keep-alive: true
+      phy-max-use-count: 1000
+      filter: "stat"
+      driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:/mapper/**
+  configuration:
+    map-underscore-to-camel-case: true

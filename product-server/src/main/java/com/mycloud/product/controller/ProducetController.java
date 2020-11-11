@@ -24,4 +24,6 @@ public class ProducetController {
 //        System.out.println("this is call remote result=" + memberFeignClient.getMemberInfo(123L));
         return memberFeignClient.getMemberInfo(123L);
     }
+
+
 }

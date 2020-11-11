@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "ums-server", fallback = MemberFallback.class)
 public interface MemberFeignClient {
 
+
     @GetMapping("/getMemberInfo/{id}")
     String getMemberInfo(@PathVariable("id") Long id);
 }

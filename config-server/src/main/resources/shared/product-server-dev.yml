@@ -35,6 +35,26 @@ spring:
         max-concurrency: 2
         #每个消费者每次监听时可拉取处理的消息数量
         prefetch: 2
+  datasource:
+    druid:
+      url: 'jdbc:mysql://47.110.49.234:3307/product_dev?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai'
+      username: 'product_dev'
+      password: 'product_1234'
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 2000
+      min-evictable-idle-time-millis: 600000
+      max-evictable-idle-time-millis: 900000
+      validation-query: "select 1"
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      keep-alive: true
+      phy-max-use-count: 1000
+      filter: "stat"
+      driver-class-name: com.mysql.cj.jdbc.Driver
 management:
   endpoints:
     web:
@@ -43,3 +63,7 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+mybatis:
+  mapper-locations: classpath:/mapper/**.xml
+  configuration:
+    map-underscore-to-camel-case: true
